@@ -32,3 +32,9 @@
 .button:active {
   top: 1px;
 }
+
+@media (max-width: 1290px) {
+  .contact-button {
+    display: none;
+  }
+}
