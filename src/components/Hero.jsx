@@ -31,7 +31,7 @@ function Hero(props) {
       <SlidingDiagonals />
       <div className="hero__container">
         <div  ref={heroContainerRef} className="hero__glass-container glass-bg z-10" onClick={executeScroll}>
-          <span className='hero__glass-text_static'>Делаю сайты </span>
+          <span className='hero__glass-text_static'>Frontend </span>
           <TypewriterText />
         </div>
         <div ref={heroAuthorRef} className="hero__content">
