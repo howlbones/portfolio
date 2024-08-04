@@ -68,7 +68,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: {todoImg},
+      img: todoImg,
       name: 'Приложение: Таск-менеджер',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/todo-list/',
@@ -76,7 +76,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: {restaurantImg},
+      img: restaurantImg,
       name: 'Сайт-меню ресторана',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/restaurant-menu/',
@@ -84,15 +84,15 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: {weatherImg},
-      name: 'Приложение: прогноз погоды',
+      img: weatherImg,
+      name: 'Приложение: Прогноз погоды',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/weather-app/',
       github: 'https://github.com/howlbones/weather-app',
       noscroll: true,
     },
     {
-      img: {onlineFromImg},
+      img: onlineFromImg,
       name: 'Онлайн форма',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/online-form/',
@@ -100,7 +100,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: {adminImg},
+      img: adminImg,
       name: 'Панель администратора',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/admin-dashboard/',
@@ -108,7 +108,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: {libraryImg},
+      img: libraryImg,
       name: 'Приложение: Онлайн библиотека',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/library-app/',
