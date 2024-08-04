@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Projects.css'
 import gpt3Img from '../assets/gpt3-landing.webp'
 import gerichtImg from '../assets/Gericht.webp'
@@ -10,6 +12,8 @@ import weatherImg from '../assets/weather-app.webp'
 import onlineFromImg from '../assets/online-form.webp'
 import adminImg from '../assets/admin-dashboard.webp'
 import libraryImg from '../assets/library-app.webp'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Project({index, img, name, tools, link, github, noscroll}) {
   return (
@@ -33,6 +37,48 @@ function Project({index, img, name, tools, link, github, noscroll}) {
 }
 
 function Projects() {
+
+  // Create refs for elements to be animated
+  const projectsLeftRef = useRef([]);
+  const projectsRightRef = useRef([]);
+
+  // UseEffect hook to trigger GSAP animations
+  useEffect(() => {
+    projectsRightRef.current.forEach((ref, index) => {
+      gsap.from(ref, {
+        x: -200,
+        opacity: 0,
+      })
+      gsap.to(ref, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ref,
+          start: 'top 90%',
+          end: 'top 70%',
+          scrub: 1,
+        },
+      });
+    });
+    projectsLeftRef.current.forEach((ref, index) => {
+      gsap.from(ref, {
+        x: 200,
+        opacity: 0,
+      })
+      gsap.to(ref, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ref,
+          start: 'top 90%',
+          end: 'top 70%',
+          scrub: 1,
+        },
+      });
+    });
+  }, []);
 
   const projects = [
     {
@@ -118,21 +164,26 @@ function Projects() {
   ]
 
   return (
-    <div className='projects w-[100%] relative z-1 pt-[100px]'>
+    <div className='projects w-[100%] relative z-1'>
       <div className="projects__content-container max-w-[1000px] m-auto">
         <h2 className='projects__heading text-center w-[100%] text-3xl'>Мои проeкты</h2>
         <div className="projects__projects-container">
             {projects.map((project, index) => (
-              <Project 
+              <div 
                 key={index} 
-                index={index}
-                name={project.name} 
-                img={project.img} 
-                tools={project.tools}
-                link={project.link}
-                github={project.github}
-                noscroll={project.noscroll}
-              />
+                ref={el => ((index % 2) ? projectsLeftRef.current[index] = el : projectsRightRef.current[index] = el)}
+              >
+                <Project 
+                  key={index} 
+                  index={index}
+                  name={project.name} 
+                  img={project.img} 
+                  tools={project.tools}
+                  link={project.link}
+                  github={project.github}
+                  noscroll={project.noscroll}
+                />
+              </div>
             ))}
         </div>
       </div>

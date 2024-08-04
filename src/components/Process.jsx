@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 import './Process.css'
 import wordpressIcon from '../assets/wordpress-icon.svg'
 import codeIcon from '../assets/code-icon.svg'
 import seoIcon from '../assets/seo-icon.svg'
 import adaptiveIcon from '../assets/adaptive-icon.svg'
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Card({ classCount, title, text, imgSrc, textBack }) {
   return (
@@ -27,9 +31,33 @@ function Card({ classCount, title, text, imgSrc, textBack }) {
 }
 
 function Process() {
+
+  // Create refs for elements to be animated
+  const containerRef = useRef(null);
+
+  // UseEffect hook to trigger GSAP animations
+  useEffect(() => {
+    gsap.from(containerRef.current, {
+      opacity: 0,
+      x: -500,
+    })
+    gsap.to(containerRef.current, {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        markers: true,
+        start: 'top 80%', // Trigger when the top of the element is 80% from the top of the viewport
+        end: 'top 30%', // End animation when the top of the element is 30% from the top of the viewport
+        scrub: true
+      }
+    });
+  }, []);
+
   return (
     <div className='process w-[100%] relative z-1 mt-[100vh]'>
-      <div className="process__container max-w-[1000px] gap-[20px] m-auto pt-[100px] pb-[100px]" >
+      <div ref={containerRef} className="process__container max-w-[1000px] gap-[20px] m-auto pt-[100px] pb-[100px]" >
         <Card
           classCount={"1"} 
           imgSrc={codeIcon}

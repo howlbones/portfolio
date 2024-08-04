@@ -1,23 +1,40 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 import './Hero.css'
 import bg from '../assets/bg.png'
 import SlidingDiagonals from './SlidingDiagonals'
 import TypewriterText from './TypewriterText'
+import { gsap } from "gsap";
 
 function Hero(props) {
+  // Create refs for elements to be animated
+  const heroContainerRef = useRef(null);
+  const heroAuthorRef = useRef(null);
+
+  // UseEffect hook to trigger GSAP animations
+  useEffect(() => {
+    gsap.from(heroAuthorRef.current, {
+      opacity: 0
+    });
+    gsap.to(heroAuthorRef.current, {
+      opacity: 1,
+      duration: 2
+    });
+  }, []);
+
   const executeScroll = () => {
     const element = document.querySelector(".process");
     element.scrollIntoView({ behavior: "smooth" });
   };   
+
   return (
     <div style={{backgroundImage: `url(${bg})`}} className='hero w-full h-svh text-center overflow-hidden top-0 z-0'>
       <SlidingDiagonals />
       <div className="hero__container">
-        <div className="hero__glass-container glass-bg z-10" onClick={executeScroll}>
+        <div  ref={heroContainerRef} className="hero__glass-container glass-bg z-10" onClick={executeScroll}>
           <span className='hero__glass-text_static'>Делаю сайты </span>
           <TypewriterText />
         </div>
-        <div className="hero__content">
+        <div ref={heroAuthorRef} className="hero__content">
           <div className="hero__author">
             <h2>ОЛЕГ ГЕРАСИМЕНКО</h2>
             <p>Frontend Веб Разработчик</p>
