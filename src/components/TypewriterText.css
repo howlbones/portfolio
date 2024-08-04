@@ -1,0 +1,20 @@
+
+.hidden {
+  opacity:0;
+}
+
+.typewriter-text {
+  height:200px;
+  width:600px;
+  display: inline;
+  color:rgb(255, 0, 0);
+  text-align: start;
+}
+
+.typewriter-text__underscore {
+  display:inline-block;
+  position:relative;
+  /* top:-0.14em; */
+  /* left:10px; */
+}
+

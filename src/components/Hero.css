@@ -1,0 +1,123 @@
+.hero {
+  background-size: auto 55%;
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  position: fixed;
+}
+
+.hero__container {
+  max-width: 1100px;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero__content {
+  width: min-content;
+  font-family: 'Rubik';
+  font-weight: 100;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+.hero__author {
+  text-align: right;
+  max-width: 280px;
+  position: relative;
+  /* bottom: 300px;
+  right: 150px; */
+  font-size: 1.3em;
+}
+
+.hero__author::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: rgb(242, 255, 2);
+  z-index: 0;
+}
+
+.hero__author h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__model {
+  width: 100%;
+  height: 85vh;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.hero__glass-container {
+  width: 100%;
+  height: min-content;
+  /* transform: translateY(calc(50vh - 100px)) translateX(-50%); */
+  padding: 20px;
+  padding-left: 60px;
+  font-size: 4em;
+  text-align: start;
+  cursor: pointer;
+  transition: 1s;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  white-space: nowrap;
+}
+
+.hero__glass-container:hover {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+@media  (max-width: 1000px) {
+  .hero__glass-container {
+    font-size: 3em;
+  }
+}
+
+@media  (max-width: 840px) {
+  .hero__container {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+@media  (max-width: 740px) {
+  .hero__glass-container {
+    font-size: 3em;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 5px;
+    height: 200px;
+  }
+
+  .hero__glass-text_static::after {
+    content:"\a";
+    white-space: pre;
+  }
+}
+
+@media  (max-width: 480px) {
+  .hero__glass-container {
+    width: 100vw;
+    font-size: 40px;
+    height: 160px;
+  }
+}
