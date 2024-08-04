@@ -27,7 +27,7 @@ function Hero(props) {
   };   
 
   return (
-    <div style={{backgroundImage: `url(${bg})`}} className='hero w-full h-svh text-center overflow-hidden top-0 z-0'>
+    <div style={{backgroundImage: `url(${bg})`}} className='hero w-full h-svh text-cente max-w-[100vw] overflow-hidden top-0 z-0'>
       <SlidingDiagonals />
       <div className="hero__container">
         <div  ref={heroContainerRef} className="hero__glass-container glass-bg z-10" onClick={executeScroll}>

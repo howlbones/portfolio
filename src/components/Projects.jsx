@@ -164,7 +164,7 @@ function Projects() {
   ]
 
   return (
-    <div className='projects w-[100%] relative z-1'>
+    <div className='projects overflow-hidden w-[100%] max-w-[100vw] relative z-1'>
       <div className="projects__content-container max-w-[1000px] m-auto">
         <h2 className='projects__heading text-center w-[100%] text-3xl'>Мои проeкты</h2>
         <div className="projects__projects-container">

@@ -41,7 +41,7 @@ function Techstack() {
     });
   }, []);
   return (
-    <section className='techstack w-[100%] h-[450px] relative z-1'>
+    <section className='techstack w-[100%] max-w-[100vw] h-[450px] relative z-1'>
       <div ref={containerRef} className="techstack__container">
         {/* <h2 className='techstack__heading text-center'>Технический стек</h2> */}
         <div className="techstack__items-container grid grid-cols-3 w-[100%] max-w-[700px] m-auto gap-[35px] pl-[25px] pr-[20px]">

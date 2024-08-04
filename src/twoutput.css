@@ -640,6 +640,10 @@ video {
   max-width: 700px;
 }
 
+.max-w-\[100vw\]{
+  max-width: 100vw;
+}
+
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -672,10 +676,6 @@ video {
   padding-top: 100px;
 }
 
-.pt-\[60px\]{
-  padding-top: 60px;
-}
-
 .text-center{
   text-align: center;
 }
@@ -703,6 +703,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Rubik';
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .glass-bg {

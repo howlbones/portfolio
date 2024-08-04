@@ -35,7 +35,7 @@ function Contacts() {
   }, []);
 
   return (
-    <div className='contacts w-[100%] relative z-1 pt-[100px]'>
+    <div className='contacts max-w-[100vw] w-[100%] relative overflow-hidden z-1 pt-[100px]'>
       <div className="contacts__content-container max-w-[1000px] m-auto">
         <h2 className='contacts__heading text-center w-[100%] text-3xl'>Контакты</h2>
         <p className='contacts__few-words'>Ищете профессионала для вашего следующего проекта? Давайте обсудим, как я могу помочь вам достичь ваших целей. Свяжитесь со мной сегодня!</p>

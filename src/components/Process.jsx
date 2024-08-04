@@ -56,7 +56,7 @@ function Process() {
   }, []);
 
   return (
-    <div className='process w-[100%] relative z-1 mt-[100vh]'>
+    <div className='process w-[100%] max-w-[100vw] overflow-hidden relative z-1 mt-[100vh]'>
       <div ref={containerRef} className="process__container max-w-[1000px] gap-[20px] m-auto pt-[100px] pb-[100px]" >
         <Card
           classCount={"1"} 
