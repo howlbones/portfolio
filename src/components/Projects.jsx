@@ -1,5 +1,15 @@
 import React from 'react'
 import './Projects.css'
+import gpt3Img from '../assets/gpt3-landing.webp'
+import gerichtImg from '../assets/Gericht.webp'
+import chessImg from '../assets/chess-club.webp'
+import cvImg from '../assets/cv-builder.webp'
+import todoImg from '../assets/todo-app.webp'
+import restaurantImg from '../assets/restaurant-menu.webp'
+import weatherImg from '../assets/weather-app.webp'
+import onlineFromImg from '../assets/online-form.webp'
+import adminImg from '../assets/admin-dashboard.webp'
+import libraryImg from '../assets/library-app.webp'
 
 function Project({index, img, name, tools, link, github, noscroll}) {
   return (
@@ -26,7 +36,7 @@ function Projects() {
 
   const projects = [
     {
-      img: './src/assets/gpt3-landing.webp',
+      img: gpt3Img,
       name: 'Лендинг GPT-3',
       tools: 'React, Vite, БЭМ методология',
       link: 'https://howlbones.github.io/gpt3-landing/',
@@ -34,7 +44,7 @@ function Projects() {
       noscroll: false,
     },
     {
-      img: './src/assets/Gericht.webp',
+      img: gerichtImg,
       name: 'Лендинг ресторана Gericht',
       tools: 'React, Vite, БЭМ методология',
       link: 'https://howlbones.github.io/gerich-restaurant/',
@@ -42,15 +52,15 @@ function Projects() {
       noscroll: false,
     },
     {
-      img: './src/assets/chess-club.webp',
+      img: chessImg,
       name: 'Лендинг шахматного турнира',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/black-knights-club-showcase/',
-      github: 'https://github.com/howlbones/gerich-restaurant',
+      github: 'https://github.com/howlbones/black-knights-club-showcase',
       noscroll: false,
     },
     {
-      img: './src/assets/cv-builder.webp',
+      img: cvImg,
       name: 'Приложение: Конструктор резюме',
       tools: 'React, Vite',
       link: 'https://cv-application-jfk711tr3-heresywolves-projects.vercel.app/',
@@ -58,7 +68,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/todo-app.webp',
+      img: {todoImg},
       name: 'Приложение: Таск-менеджер',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/todo-list/',
@@ -66,7 +76,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/restaurant-menu.webp',
+      img: {restaurantImg},
       name: 'Сайт-меню ресторана',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/restaurant-menu/',
@@ -74,7 +84,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/weather-app.webp',
+      img: {weatherImg},
       name: 'Приложение: прогноз погоды',
       tools: 'HTML, CSS, JS, Webpack',
       link: 'https://howlbones.github.io/weather-app/',
@@ -82,7 +92,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/online-form.webp',
+      img: {onlineFromImg},
       name: 'Онлайн форма',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/online-form/',
@@ -90,7 +100,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/admin-dashboard.webp',
+      img: {adminImg},
       name: 'Панель администратора',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/admin-dashboard/',
@@ -98,7 +108,7 @@ function Projects() {
       noscroll: true,
     },
     {
-      img: './src/assets/library-app.webp',
+      img: {libraryImg},
       name: 'Приложение: Онлайн библиотека',
       tools: 'HTML, CSS, JS',
       link: 'https://howlbones.github.io/library-app/',

@@ -1,5 +1,9 @@
 import React from 'react'
 import './Contacts.css'
+import macImg from '../assets/mac-screen.png'
+import emailIcon from '../assets/email_icon.png'
+import telegramIcon from '../assets/telegram_icon.png'
+import hhIcon from '../assets/HeadHunter_logo.png'
 
 function Contacts() {
   return (
@@ -11,19 +15,19 @@ function Contacts() {
           <div className='contacts__links-container'>
             <p>Олег Герасименко</p>
             <a target='_blank' href="mailto:howllbones@gmail.com">
-              <img src="./src/assets/email_icon.png" alt="Email icon" />
+              <img src={emailIcon} alt="Email icon" />
               howllbones@gmail.com
             </a>
             <a target='_blank' href="https://t.me/SaiferSamurai">
-              <img src="./src/assets/telegram_icon.png" alt="Telegram icon" />
+              <img src={telegramIcon} alt="Telegram icon" />
             Telegram
             </a>
             <a target='_blank' href="https://spb.hh.ru/resume/59b436c6ff0b2c07cf0039ed1f4d6143714944">
-              <img src="./src/assets/HeadHunter_logo.png" alt="hh.ru icon" />
+              <img src={hhIcon} alt="hh.ru icon" />
             Резюме на hh.ru
             </a>
           </div>
-          <img src="./src/assets/mac-screen.png" alt="Mac display" />
+          <img src={macImg} alt="Mac display" />
         </div>
       </div>
     </div>

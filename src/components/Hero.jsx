@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import macImg from '../assets/mac-screen.png'
 import bg from '../assets/bg.png'
 import SlidingDiagonals from './SlidingDiagonals'
 import TypewriterText from './TypewriterText'
