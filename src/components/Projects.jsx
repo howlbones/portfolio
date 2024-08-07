@@ -55,7 +55,7 @@ function Projects() {
         duration: 1,
         scrollTrigger: {
           trigger: ref,
-          start: 'top 90%',
+          start: 'top 110%',
           end: 'top 70%',
           scrub: 1,
         },
@@ -72,7 +72,7 @@ function Projects() {
         duration: 1,
         scrollTrigger: {
           trigger: ref,
-          start: 'top 90%',
+          start: 'top 110%',
           end: 'top 70%',
           scrub: 1,
         },

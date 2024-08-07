@@ -28,7 +28,7 @@ function Contacts() {
       scrollTrigger: {
         trigger: containerRef.current,
         markers: false,
-        start: 'top 90%', // Trigger when the top of the element is 80% from the top of the viewport
+        start: 'top 110%', // Trigger when the top of the element is 80% from the top of the viewport
         end: 'top 40%', // End animation when the top of the element is 30% from the top of the viewport
         scrub: true
       }
